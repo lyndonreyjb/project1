@@ -1,3 +1,4 @@
+import CategoryItem from "./components/category-item/category-item.component.jsx";
 import "./category.style.scss";
 
 function App() {
@@ -30,19 +31,8 @@ function App() {
 
   return (
     <div className="container">
-      {categories.map(({ title, id, imgUrl }) => (
-        <div key={id} className="category-container">
-          <div
-            className="background-img"
-            style={{
-              backgroundImage: `url(${imgUrl})`,
-            }}
-          />
-          <div className="category-body-container">
-            <h2>{title}</h2>
-            <p>Shop Now</p>
-          </div>
-        </div>
+      {categories.map((category) => (
+        <CategoryItem key={category.id} category={category} />
       ))}
     </div>
   );
