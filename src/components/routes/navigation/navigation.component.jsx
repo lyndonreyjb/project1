@@ -1,13 +1,21 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, link, Link } from "react-router-dom";
+import { Fragment } from "react";
 
 const Navigation = () => {
   return (
-    <div>
-      <div>
-        <h1>Navigation Bar</h1>
+    <Fragment>
+      <div className="navigation">
+        <Link className="logo-link" to="/">
+          <div>Logo</div>
+        </Link>
+        <div className="link-tags">
+          <Link className="nav-link-tags" to="/shop">
+            Shop
+          </Link>
+        </div>
       </div>
       <Outlet />
-    </div>
+    </Fragment>
   );
 };
 
