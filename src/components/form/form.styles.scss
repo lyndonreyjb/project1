@@ -1,0 +1,63 @@
+$sub-color: grey;
+$main-color: black;
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 768px) {
+        padding: 2rem;
+    }
+
+    .form-input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #f6f6f6;
+    font-size: 1.2rem;
+    color: #333;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0.2rem $main-color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+    input[type='password'] {
+        letter-spacing: 0.3em;
+    }
+
+    .form-input-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    }
+}
+
+
+button{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: $main-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: $sub-color;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
